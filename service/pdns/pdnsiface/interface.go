@@ -9,7 +9,7 @@
 package pdnsiface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/pdns"
+	"github.com/baoyxing/ksc-sdk-go/service/pdns"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

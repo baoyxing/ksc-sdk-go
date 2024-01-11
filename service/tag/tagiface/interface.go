@@ -9,7 +9,7 @@
 package tagiface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/tag"
+	"github.com/baoyxing/ksc-sdk-go/service/tag"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

@@ -9,7 +9,7 @@
 package kisv1iface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/kisv1"
+	"github.com/baoyxing/ksc-sdk-go/service/kisv1"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

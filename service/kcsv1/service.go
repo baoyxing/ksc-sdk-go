@@ -3,9 +3,9 @@
 package kcsv1
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/kscquery"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
+	"github.com/baoyxing/ksc-sdk-go/ksc"
+	"github.com/baoyxing/ksc-sdk-go/ksc/kscquery"
+	"github.com/baoyxing/ksc-sdk-go/ksc/utils"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/client"
 	"github.com/aws/aws-sdk-go/aws/client/metadata"

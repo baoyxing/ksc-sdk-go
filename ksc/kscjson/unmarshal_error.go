@@ -2,7 +2,7 @@ package kscjson
 
 import (
 	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/KscSDK/ksc-sdk-go/ksc/kscquery"
+	"github.com/baoyxing/ksc-sdk-go/ksc/kscquery"
 )
 
 type xmlErrorResponse struct {

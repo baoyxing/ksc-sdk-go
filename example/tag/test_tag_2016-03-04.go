@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
-	"github.com/KscSDK/ksc-sdk-go/service/tag"
+	"github.com/baoyxing/ksc-sdk-go/ksc"
+	"github.com/baoyxing/ksc-sdk-go/ksc/utils"
+	"github.com/baoyxing/ksc-sdk-go/service/tag"
 )
 
 func main() {

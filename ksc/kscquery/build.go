@@ -2,11 +2,11 @@ package kscquery
 
 import (
 	"fmt"
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/kscbody"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/private/protocol/query/queryutil"
+	"github.com/baoyxing/ksc-sdk-go/ksc"
+	"github.com/baoyxing/ksc-sdk-go/ksc/kscbody"
 	"net/url"
 	"reflect"
 	"runtime"

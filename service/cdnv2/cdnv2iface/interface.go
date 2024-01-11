@@ -9,7 +9,7 @@
 package cdnv2iface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/cdnv2"
+	"github.com/baoyxing/ksc-sdk-go/service/cdnv2"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )
@@ -75,6 +75,27 @@ type Cdnv2API interface {
 	GetServerDataPost(*map[string]interface{}) (*map[string]interface{}, error)
 	GetServerDataPostWithContext(aws.Context, *map[string]interface{}, ...request.Option) (*map[string]interface{}, error)
 	GetServerDataPostRequest(*map[string]interface{}) (*request.Request, *map[string]interface{})
+
+
+	GetDomainHttpCodeDetailedDataPostWithContext(aws.Context,*map[string]interface{},...request.Option) (*map[string]interface{}, error)
+	GetDomainHttpCodeDetailedDataPostRequest(*map[string]interface{}) (*request.Request,*map[string]interface{})
+	GetDomainHttpCodeDetailedDataPost(*map[string]interface{}) (*map[string]interface{}, error)
+
+	GetSrcDomainHttpCodeDetailedDataPostWithContext(aws.Context,*map[string]interface{},...request.Option) (*map[string]interface{}, error)
+	GetSrcDomainHttpCodeDetailedDataPost(*map[string]interface{}) (*map[string]interface{}, error)
+	GetSrcDomainHttpCodeDetailedDataPostRequest(*map[string]interface{}) (*request.Request,*map[string]interface{})
+
+	GetLiveServerDataGetWithContext(aws.Context,*map[string]interface{},...request.Option) (*map[string]interface{}, error)
+	GetLiveServerDataGet(*map[string]interface{}) (*map[string]interface{}, error)
+	GetLiveServerDataGetRequest(*map[string]interface{}) (*request.Request,*map[string]interface{})
+
+	GetLiveClientRequestDataGetWithContext(aws.Context,*map[string]interface{},...request.Option) (*map[string]interface{}, error)
+	GetLiveClientRequestDataGet(*map[string]interface{}) (*map[string]interface{}, error)
+	GetLiveClientRequestDataGetRequest(*map[string]interface{}) (*request.Request,*map[string]interface{})
+
+	GetLiveDomainHttpCodeDetailedDataPostWithContext(aws.Context,*map[string]interface{},...request.Option) (*map[string]interface{}, error)
+	GetLiveDomainHttpCodeDetailedDataPost(input *map[string]interface{}) (*map[string]interface{}, error)
+	GetLiveDomainHttpCodeDetailedDataPostRequest(*map[string]interface{}) (*request.Request,*map[string]interface{})
 }
 
 var _ Cdnv2API = (*cdnv2.Cdnv2)(nil)

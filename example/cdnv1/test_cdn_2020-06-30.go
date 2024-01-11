@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
-	"github.com/KscSDK/ksc-sdk-go/service/cdnv2"
+	"github.com/baoyxing/ksc-sdk-go/ksc"
+	"github.com/baoyxing/ksc-sdk-go/ksc/utils"
+	"github.com/baoyxing/ksc-sdk-go/service/cdnv2"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 	region := "cn-shanghai-2"
 
 	//debug模式的话 打开这个开关
-	svc := cdnv2.SdkNew(ksc.NewClient(ak, sk ,true), &ksc.Config{Region: &region}, &utils.UrlInfo{
+	svc := cdnv2.SdkNew(ksc.NewClient(ak, sk, true), &ksc.Config{Region: &region}, &utils.UrlInfo{
 		UseSSL: true,
 	})
 
@@ -36,7 +36,6 @@ func main() {
 	//        IpType          String  IP类型，取值为ipv4:ipv4类型数据;ipv6:ipv类型数据；单选，缺省为全部IP类型
 	//        Schema          String  协议类型， 取值为http:http协议数据; https:https协议数据；quic：quic协议数据，单选，缺省为全部协议类型
 	//        ResultType      String  统计结果数据展示方式，支持不展开和展开，缺省为 不展开（unexpand）数据展开支持全部展开（expand）和按照指定查询维度展开，包含：域名（domain）、区域、省份（province）、运营商（isp）、IP类型（ip）、协议类型（schema） 支持多个条件组合展开，多个条件之间用半角逗号区分开来 —— PS:此处一共有31种组合数据包含关系如下：域名 > 省份 > 运营商 > IP 类型 > 协议类型
-
 
 	getClientRequestData := make(map[string]interface{})
 	getClientRequestData["StartTime"] = "2023-03-02T01:00+0800"
@@ -75,8 +74,6 @@ func main() {
 	//        Schema          String  协议类型， 取值为http:http协议数据; https:https协议数据；quic：quic协议数据，单选，缺省为全部协议类型
 	//        ResultType      String  统计结果数据展示方式，支持不展开和展开，缺省为 不展开（unexpand）数据展开支持全部展开（expand）和按照指定查询维度展开，包含：域名（domain）、区域、省份（province）、运营商（isp）、IP类型（ip）、协议类型（schema） 支持多个条件组合展开，多个条件之间用半角逗号区分开来 —— PS:此处一共有31种组合数据包含关系如下：域名 > 省份 > 运营商 > IP 类型 > 协议类型
 
-
-
 	getClientRequestDataPost := make(map[string]interface{})
 	getClientRequestDataPost["StartTime"] = "2023-03-02T01:00+0800"
 	getClientRequestDataPost["EndTime"] = "2023-03-02T01:10+0800"
@@ -89,7 +86,7 @@ func main() {
 	getClientRequestDataPost["IpType"] = ""
 	getClientRequestDataPost["Schema"] = ""
 	getClientRequestDataPost["ResultType"] = ""
-	
+
 	resp, err = svc.GetClientRequestDataPost(&getClientRequestDataPost)
 	if err != nil {
 		fmt.Println("error:", err.Error())
@@ -111,7 +108,6 @@ func main() {
 	//        Regions         String  网民分布区域简称，具体见【使用须知】，支持多区域查询，多个区域用逗号（半角）分隔，缺省为全部区域
 	//        Schema          String  协议类型， 取值为http:http协议数据; https:https协议数据；quic：quic协议数据，单选，缺省为全部协议类型
 	//        ResultType      String  统计结果数据展示方式，支持不展开和展开，缺省为 不展开（unexpand）数据展开支持全部展开（expand）和按照指定查询维度展开，包含：域名（domain）、区域、省份（province）、运营商（isp）、IP类型（ip）、协议类型（schema） 支持多个条件组合展开，多个条件之间用半角逗号区分开来 —— PS:此处一共有31种组合数据包含关系如下：域名 > 省份 > 运营商 > IP 类型 > 协议类型
-
 
 	getServerDataData := make(map[string]interface{})
 	getServerDataData["StartTime"] = "2023-03-02T01:00+0800"
@@ -146,8 +142,6 @@ func main() {
 	//        Schema          String  协议类型， 取值为http:http协议数据; https:https协议数据；quic：quic协议数据，单选，缺省为全部协议类型
 	//        ResultType      String  统计结果数据展示方式，支持不展开和展开，缺省为 不展开（unexpand）数据展开支持全部展开（expand）和按照指定查询维度展开，包含：域名（domain）、区域、省份（province）、运营商（isp）、IP类型（ip）、协议类型（schema） 支持多个条件组合展开，多个条件之间用半角逗号区分开来 —— PS:此处一共有31种组合数据包含关系如下：域名 > 省份 > 运营商 > IP 类型 > 协议类型
 
-
-
 	getServerDataDataPost := make(map[string]interface{})
 	getServerDataDataPost["StartTime"] = "2023-03-02T01:00+0800"
 	getServerDataDataPost["EndTime"] = "2023-03-02T01:10+0800"
@@ -158,7 +152,7 @@ func main() {
 	getServerDataDataPost["Areas"] = "CN"
 	getServerDataDataPost["Schema"] = ""
 	getServerDataDataPost["ResultType"] = ""
-	
+
 	resp, err = svc.GetServerDataPost(&getClientRequestDataPost)
 	if err != nil {
 		fmt.Println("error:", err.Error())

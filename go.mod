@@ -1,4 +1,4 @@
-module github.com/KscSDK/ksc-sdk-go
+module github.com/baoyxing/ksc-sdk-go
 
 go 1.12
 

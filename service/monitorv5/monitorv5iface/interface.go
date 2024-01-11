@@ -9,7 +9,7 @@
 package monitorv5iface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/monitorv5"
+	"github.com/baoyxing/ksc-sdk-go/service/monitorv5"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

@@ -3,19 +3,19 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
-	"github.com/KscSDK/ksc-sdk-go/service/cdnv1"
+	"github.com/baoyxing/ksc-sdk-go/ksc"
+	"github.com/baoyxing/ksc-sdk-go/ksc/utils"
+	"github.com/baoyxing/ksc-sdk-go/service/cdnv1"
 )
 
 func main() {
-    ak := "your ak"
+	ak := "your ak"
 	sk := "your sk"
 
 	region := "cn-shanghai-2"
 
 	//debug模式的话 打开这个开关
-	svc := cdnv1.SdkNew(ksc.NewClient(ak, sk ,true), &ksc.Config{Region: &region}, &utils.UrlInfo{
+	svc := cdnv1.SdkNew(ksc.NewClient(ak, sk, true), &ksc.Config{Region: &region}, &utils.UrlInfo{
 		UseSSL: true,
 	})
 

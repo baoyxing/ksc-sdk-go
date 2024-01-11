@@ -9,7 +9,7 @@
 package kcrsiface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/kcrs"
+	"github.com/baoyxing/ksc-sdk-go/service/kcrs"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

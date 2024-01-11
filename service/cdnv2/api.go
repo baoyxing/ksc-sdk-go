@@ -302,3 +302,161 @@ func (c *Cdnv2) GetServerDataPostWithContext(ctx aws.Context, input *map[string]
 	req.ApplyOptions(opts...)
 	return out, req.Send()
 }
+const opGetDomainHttpCodeDetailedData = "GetDomainHttpCodeDetailedData"
+
+func (c *Cdnv2)GetDomainHttpCodeDetailedDataPostRequest(input *map[string]interface{}) (req *request.Request, output *map[string]interface{}){
+	op := &request.Operation{
+		Name:       opGetDomainHttpCodeDetailedData,
+		HTTPMethod: "POST",
+		HTTPPath:   "/2020-06-30/statistics/GetDomainHttpCodeDetailedData",
+	}
+	if input == nil {
+		input = &map[string]interface{}{}
+	}
+	output = &map[string]interface{}{}
+	req = c.newRequest(op, input, output)
+	return
+}
+
+func (c *Cdnv2)GetDomainHttpCodeDetailedDataPostWithContext(ctx aws.Context, input *map[string]interface{}, opts ...request.Option) (*map[string]interface{}, error){
+	req, out := c.GetDomainHttpCodeDetailedDataPostRequest(input)
+	req.SetContext(ctx)
+	req.ApplyOptions(opts...)
+	return out, req.Send()
+}
+
+func (c *Cdnv2)GetDomainHttpCodeDetailedDataPost(input *map[string]interface{}) (*map[string]interface{}, error){
+	req, out := c.GetDomainHttpCodeDetailedDataPostRequest(input)
+	return out, req.Send()
+}
+
+const  opGetSrcDomainHttpCodeDetailedData = "GetSrcDomainHttpCodeDetailedData"
+
+func (c *Cdnv2)GetSrcDomainHttpCodeDetailedDataPostRequest(input *map[string]interface{}) (req *request.Request, output *map[string]interface{}){
+	op := &request.Operation{
+		Name:       opGetSrcDomainHttpCodeDetailedData,
+		HTTPMethod: "POST",
+		HTTPPath:   "/2020-06-30/statistics/GetSrcDomainHttpCodeDetailedData",
+	}
+	if input == nil {
+		input = &map[string]interface{}{}
+	}
+	output = &map[string]interface{}{}
+	req = c.newRequest(op, input, output)
+	return
+}
+
+func (c *Cdnv2)GetSrcDomainHttpCodeDetailedDataPostWithContext(ctx aws.Context, input *map[string]interface{}, opts ...request.Option) (*map[string]interface{}, error){
+	req, out := c.GetDomainHttpCodeDetailedDataPostRequest(input)
+	req.SetContext(ctx)
+	req.ApplyOptions(opts...)
+	return out, req.Send()
+}
+
+func (c *Cdnv2)GetSrcDomainHttpCodeDetailedDataPost(input *map[string]interface{}) (*map[string]interface{}, error){
+	req, out := c.GetDomainHttpCodeDetailedDataPostRequest(input)
+	return out, req.Send()
+}
+
+const opGetLiveServerDataGet = "GetLiveServerData"
+
+
+func (c *Cdnv2) GetLiveServerDataGetRequest(input *map[string]interface{}) (req *request.Request, output *map[string]interface{}) {
+	op := &request.Operation{
+		Name:       opGetLiveServerDataGet,
+		HTTPMethod: "GET",
+		HTTPPath:   "/2020-06-30/statistics/GetLiveServerData",
+	}
+
+	if input == nil {
+		input = &map[string]interface{}{}
+	}
+
+	output = &map[string]interface{}{}
+	req = c.newRequest(op, input, output)
+
+	return
+}
+
+func (c *Cdnv2)GetLiveServerDataGetWithContext(ctx aws.Context, input *map[string]interface{}, opts ...request.Option) (*map[string]interface{}, error){
+	req, out := c.GetLiveServerDataGetRequest(input)
+	req.SetContext(ctx)
+	req.ApplyOptions(opts...)
+	return out, req.Send()
+}
+
+
+
+func (c *Cdnv2)GetLiveServerDataGet(input *map[string]interface{}) (*map[string]interface{}, error){
+	req, out := c.GetLiveServerDataGetRequest(input)
+	return out, req.Send()
+}
+
+
+
+
+
+const opGetLiveClientRequestDataGet = "GetLiveClientRequestData"
+
+func (c *Cdnv2) GetLiveClientRequestDataGetRequest(input *map[string]interface{}) (req *request.Request, output *map[string]interface{}) {
+	op := &request.Operation{
+		Name:       opGetLiveClientRequestDataGet,
+		HTTPMethod: "GET",
+		HTTPPath:   "/2020-06-30/statistics/GetLiveClientRequestData",
+	}
+	if input == nil {
+		input = &map[string]interface{}{}
+	}
+	output = &map[string]interface{}{}
+	req = c.newRequest(op, input, output)
+
+	return
+}
+
+func (c *Cdnv2)GetLiveClientRequestDataGetWithContext(ctx aws.Context, input *map[string]interface{}, opts ...request.Option) (*map[string]interface{}, error){
+	req, out := c.GetLiveServerDataGetRequest(input)
+	req.SetContext(ctx)
+	req.ApplyOptions(opts...)
+	return out, req.Send()
+}
+
+
+
+func (c *Cdnv2)GetLiveClientRequestDataGet(input *map[string]interface{}) (*map[string]interface{}, error){
+	req, out := c.GetLiveServerDataGetRequest(input)
+	return out, req.Send()
+}
+
+
+const opGetLiveDomainHttpCodeDetailedDataPost = "GetLiveDomainHttpCodeDetailedData"
+func (c *Cdnv2) GetLiveDomainHttpCodeDetailedDataPostRequest(input *map[string]interface{}) (req *request.Request, output *map[string]interface{}) {
+	op := &request.Operation{
+		Name:       opGetLiveDomainHttpCodeDetailedDataPost,
+		HTTPMethod: "POST",
+		HTTPPath:   "/2020-06-30/statistics/GetLiveDomainHttpCodeDetailedData",
+	}
+
+	if input == nil {
+		input = &map[string]interface{}{}
+	}
+
+	output = &map[string]interface{}{}
+	req = c.newRequest(op, input, output)
+
+	req.HTTPRequest.Header.Set("Content-Type", "application/json; charset=utf-8")
+
+	return
+}
+
+
+func (c *Cdnv2)GetLiveDomainHttpCodeDetailedDataPostWithContext(ctx aws.Context, input *map[string]interface{}, opts ...request.Option) (*map[string]interface{}, error){
+	req, out := c.GetLiveDomainHttpCodeDetailedDataPostRequest(input)
+	req.SetContext(ctx)
+	req.ApplyOptions(opts...)
+	return out, req.Send()
+}
+
+func (c *Cdnv2) GetLiveDomainHttpCodeDetailedDataPost(input *map[string]interface{}) (*map[string]interface{}, error) {
+	req, out := c.GetLiveDomainHttpCodeDetailedDataPostRequest(input)
+	return out, req.Send()
+}

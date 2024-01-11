@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/example/nosql"
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
-	"github.com/KscSDK/ksc-sdk-go/service/mongodb"
+	"github.com/baoyxing/ksc-sdk-go/example/nosql"
+	"github.com/baoyxing/ksc-sdk-go/ksc"
+	"github.com/baoyxing/ksc-sdk-go/ksc/utils"
+	"github.com/baoyxing/ksc-sdk-go/service/mongodb"
 )
 
 var m *mongodb.Mongodb
