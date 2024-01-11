@@ -9,7 +9,7 @@
 使用vendor(Go 1.5+)做依赖的话可以直接使用本sdk工具
 
 ##### Go 1.5
-需要去[AWS-SDK-GO](https://github.com/aws/aws-sdk-go) 下载后，拷贝aws-sdk-go到在GOPATH下面/src/github.com/aws目录下 ($GOPATH/src/github.com/aws)目录下 
+需要去[AWS-SDK-GO](https://github.com/aws/aws-sdk-go) 下载后，拷贝aws-sdk-go到在GOPATH下面/src/github.com/aws目录下 ($GOPATH/src/github.com/aws)目录下
 或者使用 go get github.com/aws/aws-sdk-go
 
 ##### 代码示例
@@ -56,4 +56,5 @@ UseInternal:true 代表使用金山云内网域名
 			fmt.Printf("%+v:%+v\n", item["SubnetId"], item["SubnetName"])
 		}
 	}
+
 
