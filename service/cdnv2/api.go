@@ -460,3 +460,38 @@ func (c *Cdnv2) GetLiveDomainHttpCodeDetailedDataPost(input *map[string]interfac
 	req, out := c.GetLiveDomainHttpCodeDetailedDataPostRequest(input)
 	return out, req.Send()
 }
+
+const opGetRefreshOrPreloadTaskPost = "GetRefreshOrPreloadTask"
+func (c *Cdnv2) GetRefreshOrPreloadTaskPostRequest(input *map[string]interface{}) (req *request.Request, output *map[string]interface{}) {
+	op := &request.Operation{
+		Name:       opGetRefreshOrPreloadTaskPost,
+		HTTPMethod: "POST",
+		HTTPPath:   "/2021-12-01/content/GetRefreshOrPreloadTask",
+	}
+
+	if input == nil {
+		input = &map[string]interface{}{}
+	}
+
+	output = &map[string]interface{}{}
+	req = c.newRequest(op, input, output)
+
+	req.HTTPRequest.Header.Set("Content-Type", "application/json; charset=utf-8")
+
+	return
+}
+func (c *Cdnv2) GetRefreshOrPreloadTaskPost(input *map[string]interface{}) (*map[string]interface{}, error) {
+	req, out := c.GetRefreshOrPreloadTaskPostRequest(input)
+	return out, req.Send()
+}
+
+func (c *Cdnv2) GetRefreshOrPreloadTaskPostWithContext(ctx aws.Context, input *map[string]interface{}, opts ...request.Option) (*map[string]interface{}, error) {
+	req, out := c.GetRefreshOrPreloadTaskPostRequest(input)
+	req.SetContext(ctx)
+	req.ApplyOptions(opts...)
+	return out, req.Send()
+}
+
+func (c *Cdnv2)UpdateVersion(version string) {
+	c.APIVersion = version
+}

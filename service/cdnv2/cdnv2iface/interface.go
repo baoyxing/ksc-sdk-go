@@ -96,6 +96,11 @@ type Cdnv2API interface {
 	GetLiveDomainHttpCodeDetailedDataPostWithContext(aws.Context,*map[string]interface{},...request.Option) (*map[string]interface{}, error)
 	GetLiveDomainHttpCodeDetailedDataPost(input *map[string]interface{}) (*map[string]interface{}, error)
 	GetLiveDomainHttpCodeDetailedDataPostRequest(*map[string]interface{}) (*request.Request,*map[string]interface{})
+
+	GetRefreshOrPreloadTaskPostRequest(input *map[string]interface{}) (req *request.Request, output *map[string]interface{})
+	GetRefreshOrPreloadTaskPost(input *map[string]interface{}) (*map[string]interface{}, error)
+	GetRefreshOrPreloadTaskPostWithContext(ctx aws.Context, input *map[string]interface{}, opts ...request.Option) (*map[string]interface{}, error)
+
 }
 
 var _ Cdnv2API = (*cdnv2.Cdnv2)(nil)

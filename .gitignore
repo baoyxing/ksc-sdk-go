@@ -24,4 +24,4 @@ go.work
 /vendor/src/
 .idea/
 doc
-
+.DS_Store
